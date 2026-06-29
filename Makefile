@@ -8,7 +8,7 @@ ML_PLATFORMS=linux/amd64,linux/arm,linux/arm64,linux/ppc64le,linux/s390x
 
 
 VERSION?=v1.2.0
-GIT_COMMIT:=$(shell git rev-parse --short HEAD)
+GIT_COMMIT?=$(shell git rev-parse --short HEAD 2>/dev/null || echo unknown)
 
 
 KUBE_EVENTER_LDFLAGS=-w -X github.com/AliyunContainerService/kube-eventer/version.Version=$(VERSION) -X github.com/AliyunContainerService/kube-eventer/version.GitCommit=$(GIT_COMMIT)

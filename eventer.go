@@ -68,7 +68,7 @@ func main() {
 
 	setMaxProcs()
 
-	klog.Infof(strings.Join(os.Args, " "))
+	klog.Info(strings.Join(os.Args, " "))
 	klog.Info(version.VersionInfo())
 	if err := validateFlags(); err != nil {
 		klog.Fatal(err)

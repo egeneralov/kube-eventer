@@ -41,7 +41,7 @@ func TestSimpleWrite(t *testing.T) {
 	}
 
 	log := batchToString(&batch)
-	fmt.Printf(log)
+	fmt.Printf("%s", log)
 
 	assert.True(t, strings.Contains(log, "bzium"))
 	assert.True(t, strings.Contains(log, "251"))

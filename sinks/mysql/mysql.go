@@ -71,7 +71,7 @@ func eventToPoint(event *kube_api.Event) (*mysql_common.MysqlKubeEventPoint, err
 	if err != nil {
 		return nil, err
 	}
-	klog.V(9).Infof(value)
+	klog.V(9).Info(value)
 
 	point := mysql_common.MysqlKubeEventPoint{
 		Name:                     event.InvolvedObject.Name,

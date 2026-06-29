@@ -24,7 +24,7 @@ import (
 	"strconv"
 	"time"
 
-	kafka "github.com/Shopify/sarama"
+	kafka "github.com/IBM/sarama"
 	"k8s.io/klog/v2"
 )
 

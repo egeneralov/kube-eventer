@@ -88,19 +88,19 @@ func TestGetSLSEndpoint(t *testing.T) {
 			name:     "default value",
 			region:   "",
 			internal: false,
-			expected: SLSDefaultEndpoint,
+			expected: "https://." + SLSDefaultEndpoint,
 		},
 		{
 			name:     "external",
 			region:   "",
 			internal: false,
-			expected: SLSDefaultEndpoint,
+			expected: "https://." + SLSDefaultEndpoint,
 		},
 		{
 			name:     "internal",
 			region:   "cn-beijing",
 			internal: true,
-			expected: "cn-beijing-intranet.log.aliyuncs.com",
+			expected: "https://cn-beijing-intranet." + SLSDefaultEndpoint,
 		},
 	}
 

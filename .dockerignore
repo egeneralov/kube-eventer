@@ -1,0 +1,37 @@
+# VCS, IDE, local tooling
+.git
+.gitignore
+.github
+.refact
+.idea
+.vscode
+.cursor
+
+# CI, coverage, docs — not needed to compile
+.travis.yml
+.cover
+docs
+**/*.md
+
+# Deploy manifests and Dockerfiles — not needed inside the image;
+# excluding deploy/ keeps edits here from busting the COPY . . cache layer
+deploy
+
+# Dev / test / lint scripts
+hack
+
+# Tests
+**/*_test.go
+
+# Build artifacts
+kube-eventer
+*.exe
+*.out
+
+# Modules are downloaded in the Dockerfile
+vendor
+
+# Repo metadata
+OWNERS
+LICENSE
+.dockerignore
